@@ -12,6 +12,14 @@
       type="text/css"
     />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style>
+      input[type="number"]::-webkit-outer-spin-button,
+      input[type="number"]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+    </style>
   </head>
 
   <body class="bg-slate-800">
@@ -30,16 +38,32 @@
       <div class="">
         <div class="hero-content flex-col lg:flex-row-reverse">
           <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
-            <div class="card-body">
+            <form class="card-body">
               <fieldset class="fieldset">
                 <label class="fieldset-label">Mobile Number</label>
-                <input type="number" class="input" placeholder="Enter your number" />
+                <input
+                  value="01999999999"
+                  id="acc-number"
+                  type="number"
+                  class="input"
+                  placeholder="Enter your number"
+                  required
+                />
                 <label class="fieldset-label">4 digit Pin</label>
-                <input type="text" class="input" placeholder="Enter 4 Digit Pin" />
+                <input
+                  value="1234"
+                  id="pin"
+                  type="text"
+                  class="input"
+                  placeholder="Enter 4 Digit Pin"
+                  required
+                />
                 <div><a class="link link-hover">Forgot pin?</a></div>
-                <button id="login-btn" class="btn btn-neutral mt-4">Login</button>
+                <button id="login-btn" class="btn btn-neutral mt-4">
+                  Login
+                </button>
               </fieldset>
-            </div>
+            </form>
           </div>
         </div>
       </div>
@@ -47,6 +71,6 @@
     </section>
 
     <!-- Scripts -->
-     <script src="script/login.js"></script>
+    <script src="script/login.js"></script>
   </body>
 </html>
