@@ -13,7 +13,18 @@
     />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
+    <!-- Font outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
     <style>
+      .font-outfit {
+        font-family: "Outfit", serif;
+      }
       input[type="number"]::-webkit-outer-spin-button,
       input[type="number"]::-webkit-inner-spin-button {
         -webkit-appearance: none;
@@ -22,44 +33,43 @@
     </style>
   </head>
 
-  <body class="bg-slate-800">
+  <body class="bg-slate-800 font-outfit">
     <section class="max-w-md min-h-screen mx-auto bg-gray-200 py-6">
       <header>
         <nav class="flex justify-center items-center mt-6">
           <div
-            class="mt-10 relative flex justify-center items-center w-9/12 mb-10"
+            class="mt-10 relative flex justify-center items-center w-9/12 mb-10 "
           >
-            <img class="w-48 absolute" src="assets/bg.png" alt="" />
-            <img class="w-16" src="assets/Group.png" alt="" />
+            <img class="w-56 absolute -top-13" src="assets/bg.png" alt="" />
+            <img class="w-16 z-10" src="assets/Group.png" alt="" />
           </div>
         </nav>
       </header>
       <!-- Login section -->
       <div class="">
         <div class="hero-content flex-col lg:flex-row-reverse">
-          <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+          <div class="card bg-white w-full max-w-sm shrink-0 rounded-3xl shadow-2xl p-2">
             <form class="card-body">
               <fieldset class="fieldset">
-                <label class="fieldset-label">Mobile Number</label>
+                <label class="fieldset-label text-black font-medium ml-2">Mobile Number</label>
                 <input
                   value="01999999999"
                   id="acc-number"
                   type="number"
-                  class="input"
+                  class="input bg-[#F4F5F7] rounded-full border-none pl-5"
                   placeholder="Enter your number"
                   required
                 />
-                <label class="fieldset-label">4 digit Pin</label>
+                <label class="fieldset-label text-black font-medium ml-2">4 digit Pin</label>
                 <input
                   value="1234"
                   id="pin"
                   type="text"
-                  class="input"
+                  class="input bg-[#F4F5F7] rounded-full border-none pl-5"
                   placeholder="Enter 4 Digit Pin"
                   required
                 />
-                <div><a class="link link-hover">Forgot pin?</a></div>
-                <button id="login-btn" class="btn btn-neutral mt-4">
+                <button id="login-btn" class="btn btn-neutral mt-4 bg-[#0874F2] border-none rounded-full">
                   Login
                 </button>
               </fieldset>
