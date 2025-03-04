@@ -34,12 +34,19 @@
         -webkit-appearance: none;
         margin: 0;
       }
+      select:invalid {
+        color: rgba(0, 0, 0, 0.5); 
+      }
+      select:focus,
+      select:not(:invalid) {
+        color: black;
+      }
     </style>
   </head>
 
   <body class="bg-slate-800 font-outfit">
     <section class="max-w-md min-h-screen mx-auto bg-gray-200">
-      <header class="bg-white py-6 px-6 rounded-b-3xl">
+      <header class="bg-white p-6 rounded-b-3xl">
         <nav class="flex justify-between items-center mt-6">
           <div class="flex items-center gap-2">
             <img class="w-14 h-full" src="assets/Group.png" alt="" />
@@ -66,6 +73,7 @@
           </p>
 
           <div class="cards grid grid-cols-3 mt-14 gap-2">
+            <!-- Add money -->
             <div
               id="add-money-box"
               class="box border border-[rgba(8,8,8,0.3)] rounded-md p-5 text-center"
@@ -73,99 +81,48 @@
               <img class="w-7 mx-auto" src="assets/wallet1.png" alt="" />
               <h3 class="text-[rgba(8,8,8,0.7)] text-sm">Add Money</h3>
             </div>
-            <!-- id="cashout-box" -->
+            <!-- Cash out -->
             <div
               id="cashout-box"
               class="box border border-[rgba(8,8,8,0.3)] rounded-md p-5 text-center"
             >
-              <img class="w-7 mx-auto" src="assets/wallet1.png" alt="" />
-              <h3 class="text-[rgba(8,8,8,0.7)] text-sm">Add Money</h3>
+              <img class="w-7 mx-auto" src="assets/send1.png" alt="" />
+              <h3 class="text-[rgba(8,8,8,0.7)] text-sm">Cashout</h3>
             </div>
+            <!-- Transfer box -->
             <div
-              id="add-money-box"
+              id="transfer-box"
               class="box border border-[rgba(8,8,8,0.3)] rounded-md p-5 text-center"
             >
-              <img class="w-7 mx-auto" src="assets/wallet1.png" alt="" />
-              <h3 class="text-[rgba(8,8,8,0.7)] text-sm">Add Money</h3>
+              <img class="w-7 mx-auto" src="assets/money1.png" alt="" />
+              <h3 class="text-[rgba(8,8,8,0.7)] text-sm">Transfer</h3>
             </div>
+            <!-- Bonus box -->
             <div
-              id="add-money-box"
+              id="bonus-box"
               class="box border border-[rgba(8,8,8,0.3)] rounded-md p-5 text-center"
             >
-              <img class="w-7 mx-auto" src="assets/wallet1.png" alt="" />
-              <h3 class="text-[rgba(8,8,8,0.7)] text-sm">Add Money</h3>
+              <img class="w-7 mx-auto" src="assets/bonus1.png" alt="" />
+              <h3 class="text-[rgba(8,8,8,0.7)] text-sm">Get Bonus</h3>
             </div>
+            <!-- Pay bill box -->
             <div
-              id="add-money-box"
+              id="pay-bill-box"
               class="box border border-[rgba(8,8,8,0.3)] rounded-md p-5 text-center"
             >
-              <img class="w-7 mx-auto" src="assets/wallet1.png" alt="" />
-              <h3 class="text-[rgba(8,8,8,0.7)] text-sm">Add Money</h3>
+              <img class="w-7 mx-auto" src="assets/purse1.png" alt="" />
+              <h3 class="text-[rgba(8,8,8,0.7)] text-sm">Pay Bill</h3>
             </div>
-            <!-- id="transection-box" -->
+            <!-- transection box -->
             <div
-              id="transection-box"
+              id="transaction-box"
               class="box border border-[rgba(8,8,8,0.3)] rounded-md p-5 text-center"
             >
-              <img class="w-7 mx-auto" src="assets/wallet1.png" alt="" />
-              <h3 class="text-[rgba(8,8,8,0.7)] text-sm">Add Money</h3>
+              <img class="w-7 mx-auto" src="assets/transaction1.png" alt="" />
+              <h3 class="text-[rgba(8,8,8,0.7)] text-sm">Transaction</h3>
             </div>
           </div>
         </section>
-        <!-- Add money -->
-        <!-- <section id="addmoney" class="p-2">
-          <h2>Add money</h2>
-          <div class="">
-            <div class="hero-content flex-col lg:flex-row-reverse">
-              <div class="card w-full max-w-sm shrink-0 shadow-2xl">
-                <div class="card-body">
-                  <legend class="fieldset-label">Select Bank</legend>
-                  <select id="all-bank" class="select" required>
-                    <option value="" disabled selected>Pick a Bank</option>
-                    <option value="bkash">Bkash</option>
-                    <option value="nogod">Nogod</option>
-                    <option value="dbbl">DBBL</option>
-                  </select>
-                  <fieldset class="fieldset">
-                    <label class="fieldset-label">Mobile Number</label>
-                    <input
-                      value="01999999999"
-                      id="acc-number"
-                      type="number"
-                      class="input"
-                      placeholder="Enter your number"
-                      required
-                    />
-                    <label class="fieldset-label">Amount</label>
-                    <input
-                      id="amount"
-                      type="number"
-                      class="input"
-                      placeholder="Enter amount"
-                      required
-                    />
-                    <label class="fieldset-label">4 digit Pin</label>
-                    <input
-                      value="1234"
-                      id="pin"
-                      type="text"
-                      class="input"
-                      placeholder="Enter 4 Digit Pin"
-                      required
-                    />
-                    <div><a class="link link-hover">Forgot pin?</a></div>
-                    <button
-                      id="add-money-btn"
-                      class="btn btn-neutral bg-blue-700 mt-4"
-                    >
-                      Add Money
-                    </button>
-                  </fieldset>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section> -->
 
         <!-- CashOut -->
         <!-- <section id="cashout">
@@ -212,6 +169,78 @@
           <div id="transection-container"></div>
         </section> -->
       </header>
+      <main>
+        <section>
+          <!-- History -->
+        </section>
+        <!-- Add money -->
+        <section id="addmoney" class="p-6 mt-3">
+          <h2 class="text-lg font-bold">Add money</h2>
+          <div class="bg-white rounded-3xl mt-3">
+            <div class="">
+              <div class="">
+                <div class="card-body">
+                  <legend class="fieldset-label font-medium ml-1 ">
+                    Select a Bank
+                  </legend>
+                  <select
+                    id="all-bank"
+                    class="select pl-5 rounded-full bg-[#F4F5F7] border-none w-full"
+                    required
+                  >
+                    <option
+                      value=""
+                      disabled
+                      selected
+                      hidden
+                      class="text-gray-100"
+                    >
+                      Select Bank
+                    </option>
+                    <option value="bkash">Bkash</option>
+                    <option value="nogod">Nogod</option>
+                    <option value="dbbl">DBBL</option>
+                  </select>
+                  <fieldset class="fieldset">
+                    <label class="fieldset-label font-medium ml-1 mt-2">Bank Account Number</label>
+                    <input
+                      value="01999999999"
+                      id="acc-number"
+                      type="number"
+                      class="input pl-5 rounded-full bg-[#F4F5F7] border-none w-full"
+                      placeholder="Enter your number"
+                      required
+                    />
+                    <label class="fieldset-label font-medium ml-1 mt-2">Amount</label>
+                    <input
+                      id="amount"
+                      type="number"
+                      class="input pl-5 rounded-full bg-[#F4F5F7] border-none w-full"
+                      placeholder="Enter amount"
+                      required
+                    />
+                    <label class="fieldset-label font-medium ml-1 mt-2">4 digit Pin</label>
+                    <input
+                      value="1234"
+                      id="pin"
+                      type="text"
+                      class="input pl-5 rounded-full bg-[#F4F5F7] border-none w-full"
+                      placeholder="Enter 4 Digit Pin"
+                      required
+                    />
+                    <button
+                      id="add-money-btn"
+                      class="btn btn-neutral bg-blue-700 mt-5 rounded-full border-none"
+                    >
+                      Add Money
+                    </button>
+                  </fieldset>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
     </section>
     <script src="script/addMoney.js"></script>
     <script src="script/toggle.js"></script>
