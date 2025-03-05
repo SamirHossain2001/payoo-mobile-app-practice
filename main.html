@@ -35,7 +35,7 @@
         margin: 0;
       }
       select:invalid {
-        color: rgba(0, 0, 0, 0.5); 
+        color: rgba(0, 0, 0, 0.5);
       }
       select:focus,
       select:not(:invalid) {
@@ -124,43 +124,6 @@
           </div>
         </section>
 
-        <!-- CashOut -->
-        <!-- <section id="cashout">
-          <h2>CashOut</h2>
-          <fieldset class="fieldset">
-            <label class="fieldset-label">Mobile Number</label>
-            <input
-              value="01999999999"
-              id="acc-number"
-              type="number"
-              class="input"
-              placeholder="Enter your number"
-              required
-            />
-            <label class="fieldset-label">Amount</label>
-            <input
-              id="cashout-amount"
-              type="number"
-              class="input"
-              placeholder="Enter amount"
-              required
-            />
-            <label class="fieldset-label">4 digit Pin</label>
-            <input
-              value="1234"
-              id="cashout-pin"
-              type="text"
-              class="input"
-              placeholder="Enter 4 Digit Pin"
-              required
-            />
-            <div><a class="link link-hover">Forgot pin?</a></div>
-            <button id="cashout-btn" class="btn btn-neutral bg-blue-700 mt-4">
-              CashOut
-            </button>
-          </fieldset>
-        </section> -->
-
         <!-- Transection history -->
         <!-- <section id="transection-history" class="p-4">
           <h1 class="text-3xl font-bold text-red-400 text-center">
@@ -178,64 +141,118 @@
           <h2 class="text-lg font-bold">Add money</h2>
           <div class="bg-white rounded-3xl mt-3">
             <div class="">
-              <div class="">
-                <div class="card-body">
-                  <legend class="fieldset-label font-medium ml-1 ">
-                    Select a Bank
-                  </legend>
-                  <select
-                    id="all-bank"
-                    class="select pl-5 rounded-full bg-[#F4F5F7] border-none w-full"
-                    required
+              <div class="card-body">
+                <legend class="fieldset-label font-medium ml-1">
+                  Select a Bank
+                </legend>
+                <select
+                  id="all-bank"
+                  class="select pl-5 rounded-full bg-[#F4F5F7] border-none w-full"
+                  required
+                >
+                  <option
+                    value=""
+                    disabled
+                    selected
+                    hidden
+                    class="text-gray-100"
                   >
-                    <option
-                      value=""
-                      disabled
-                      selected
-                      hidden
-                      class="text-gray-100"
-                    >
-                      Select Bank
-                    </option>
-                    <option value="bkash">Bkash</option>
-                    <option value="nogod">Nogod</option>
-                    <option value="dbbl">DBBL</option>
-                  </select>
-                  <fieldset class="fieldset">
-                    <label class="fieldset-label font-medium ml-1 mt-2">Bank Account Number</label>
-                    <input
-                      value="01999999999"
-                      id="acc-number"
-                      type="number"
-                      class="input pl-5 rounded-full bg-[#F4F5F7] border-none w-full"
-                      placeholder="Enter your number"
-                      required
-                    />
-                    <label class="fieldset-label font-medium ml-1 mt-2">Amount</label>
-                    <input
-                      id="amount"
-                      type="number"
-                      class="input pl-5 rounded-full bg-[#F4F5F7] border-none w-full"
-                      placeholder="Enter amount"
-                      required
-                    />
-                    <label class="fieldset-label font-medium ml-1 mt-2">4 digit Pin</label>
-                    <input
-                      value="1234"
-                      id="pin"
-                      type="text"
-                      class="input pl-5 rounded-full bg-[#F4F5F7] border-none w-full"
-                      placeholder="Enter 4 Digit Pin"
-                      required
-                    />
-                    <button
-                      id="add-money-btn"
-                      class="btn btn-neutral bg-blue-700 mt-5 rounded-full border-none"
-                    >
-                      Add Money
-                    </button>
-                  </fieldset>
-                </div>
+                    Select Bank
+                  </option>
+                  <option value="bkash">Bkash</option>
+                  <option value="nogod">Nogod</option>
+                  <option value="dbbl">DBBL</option>
+                </select>
+                <fieldset class="fieldset">
+                  <label class="fieldset-label font-medium ml-1 mt-2"
+                    >Bank Account Number</label
+                  >
+                  <input
+                    value="01999999999"
+                    id="acc-number"
+                    type="number"
+                    class="input pl-5 rounded-full bg-[#F4F5F7] border-none w-full"
+                    placeholder="Enter your number"
+                    required
+                  />
+                  <label class="fieldset-label font-medium ml-1 mt-2"
+                    >Amount</label
+                  >
+                  <input
+                    id="amount"
+                    type="number"
+                    class="input pl-5 rounded-full bg-[#F4F5F7] border-none w-full"
+                    placeholder="Enter amount"
+                    required
+                  />
+                  <label class="fieldset-label font-medium ml-1 mt-2"
+                    >Pin Number</label
+                  >
+                  <input
+                    value="1234"
+                    id="pin"
+                    type="text"
+                    class="input pl-5 rounded-full bg-[#F4F5F7] border-none w-full"
+                    placeholder="Enter 4 Digit Pin"
+                    required
+                  />
+                  <button
+                    id="add-money-btn"
+                    class="btn btn-neutral bg-blue-700 mt-5 rounded-full border-none"
+                  >
+                    Add Money
+                  </button>
+                </fieldset>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- CashOut -->
+        <section id="cashout" class="p-6 mt-3">
+          <h2 class="text-lg font-bold">Cash Out</h2>
+          <div class="bg-white rounded-3xl mt-3">
+            <div class="">
+              <div class="card-body">
+                <fieldset class="fieldset">
+                  <label class="fieldset-label font-medium ml-1 mt-2"
+                    >Agent Number</label
+                  >
+                  <input
+                    value="01777777777"
+                    id="cashout-number"
+                    type="number"
+                    class="input pl-5 rounded-full bg-[#F4F5F7] border-none w-full"
+                    placeholder="Enter 11 digit number"
+                    required
+                  />
+                  <label class="fieldset-label font-medium ml-1 mt-2"
+                    >Amount</label
+                  >
+                  <input
+                    id="cashout-amount"
+                    type="number"
+                    class="input pl-5 rounded-full bg-[#F4F5F7] border-none w-full"
+                    placeholder="Enter amount"
+                    required
+                  />
+                  <label class="fieldset-label font-medium ml-1 mt-2"
+                    >Pin Number</label
+                  >
+                  <input
+                    value="1234"
+                    id="cashout-pin"
+                    type="text"
+                    class="input pl-5 rounded-full bg-[#F4F5F7] border-none w-full"
+                    placeholder="Enter 4 Digit Pin"
+                    required
+                  />
+                  <button
+                    id="cashout-btn"
+                    class="btn btn-neutral bg-blue-700 mt-5 rounded-full border-none"
+                  >
+                    Withdraw Money
+                  </button>
+                </fieldset>
               </div>
             </div>
           </div>
