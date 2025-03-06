@@ -60,7 +60,7 @@
 
           <button
             id="logout-btn"
-            class="btn border border-gray-300 bg-white opacity-50"
+            class="btn border border-gray-300 bg-white opacity-50 hover:border-[#0874F2] hover:text-[#0874F2] hover:opacity-100"
           >
             <i class="fa-solid fa-arrow-right-from-bracket"></i> Log Out
           </button>
@@ -76,50 +76,74 @@
             <!-- Add money -->
             <div
               id="add-money-box"
-              class="box border border-[rgba(8,8,8,0.3)] rounded-md p-5 text-center"
+              class="box border-2 border-[rgba(8,8,8,0.3)] rounded-md p-5 text-center hover:border-[#0874F2] hover:bg-[rgba(8,116,242,0.05)] group"
             >
               <img class="w-7 mx-auto" src="assets/wallet1.png" alt="" />
-              <h3 class="text-[rgba(8,8,8,0.7)] text-sm">Add Money</h3>
+              <h3
+                class="text-[rgba(8,8,8,0.7)] text-sm group-hover:text-[#0874F2] group-hover:font-bold"
+              >
+                Add Money
+              </h3>
             </div>
             <!-- Cash out -->
             <div
               id="cashout-box"
-              class="box border border-[rgba(8,8,8,0.3)] rounded-md p-5 text-center"
+              class="box border-2 border-[rgba(8,8,8,0.3)] rounded-md p-5 text-center hover:border-[#0874F2] hover:bg-[rgba(8,116,242,0.05)] group"
             >
               <img class="w-7 mx-auto" src="assets/send1.png" alt="" />
-              <h3 class="text-[rgba(8,8,8,0.7)] text-sm">Cashout</h3>
+              <h3
+                class="text-[rgba(8,8,8,0.7)] text-sm group-hover:text-[#0874F2] group-hover:font-bold"
+              >
+                Cashout
+              </h3>
             </div>
             <!-- Transfer box -->
             <div
               id="transfer-box"
-              class="box border border-[rgba(8,8,8,0.3)] rounded-md p-5 text-center"
+              class="box border-2 border-[rgba(8,8,8,0.3)] rounded-md p-5 text-center hover:border-[#0874F2] hover:bg-[rgba(8,116,242,0.05)] group"
             >
               <img class="w-7 mx-auto" src="assets/money1.png" alt="" />
-              <h3 class="text-[rgba(8,8,8,0.7)] text-sm">Transfer</h3>
+              <h3
+                class="text-[rgba(8,8,8,0.7)] text-sm group-hover:text-[#0874F2] group-hover:font-bold"
+              >
+                Transfer
+              </h3>
             </div>
             <!-- Bonus box -->
             <div
               id="bonus-box"
-              class="box border border-[rgba(8,8,8,0.3)] rounded-md p-5 text-center"
+              class="box border-2 border-[rgba(8,8,8,0.3)] rounded-md p-5 text-center hover:border-[#0874F2] hover:bg-[rgba(8,116,242,0.05)] group"
             >
               <img class="w-7 mx-auto" src="assets/bonus1.png" alt="" />
-              <h3 class="text-[rgba(8,8,8,0.7)] text-sm">Get Bonus</h3>
+              <h3
+                class="text-[rgba(8,8,8,0.7)] text-sm group-hover:text-[#0874F2] group-hover:font-bold"
+              >
+                Get Bonus
+              </h3>
             </div>
             <!-- Pay bill box -->
             <div
               id="pay-bill-box"
-              class="box border border-[rgba(8,8,8,0.3)] rounded-md p-5 text-center"
+              class="box border-2 border-[rgba(8,8,8,0.3)] rounded-md p-5 text-center hover:border-[#0874F2] hover:bg-[rgba(8,116,242,0.05)] group"
             >
               <img class="w-7 mx-auto" src="assets/purse1.png" alt="" />
-              <h3 class="text-[rgba(8,8,8,0.7)] text-sm">Pay Bill</h3>
+              <h3
+                class="text-[rgba(8,8,8,0.7)] text-sm group-hover:text-[#0874F2] group-hover:font-bold"
+              >
+                Pay Bill
+              </h3>
             </div>
             <!-- transection box -->
             <div
               id="transaction-box"
-              class="box border border-[rgba(8,8,8,0.3)] rounded-md p-5 text-center"
+              class="box border-2 border-[rgba(8,8,8,0.3)] rounded-md p-5 text-center hover:border-[#0874F2] hover:bg-[rgba(8,116,242,0.05)] group"
             >
               <img class="w-7 mx-auto" src="assets/transaction1.png" alt="" />
-              <h3 class="text-[rgba(8,8,8,0.7)] text-sm">Transaction</h3>
+              <h3
+                class="text-[rgba(8,8,8,0.7)] text-sm group-hover:text-[#0874F2] group-hover:font-bold"
+              >
+                Transaction
+              </h3>
             </div>
           </div>
         </section>
@@ -133,8 +157,9 @@
         </section> -->
       </header>
       <main>
-        <section>
+        <section id="history" class="p-6 mt-3">
           <!-- History -->
+          <h2 class="text-lg font-bold">History</h2>
         </section>
         <!-- Add money -->
         <section id="addmoney" class="p-6 mt-3">
@@ -257,11 +282,62 @@
             </div>
           </div>
         </section>
+        <!-- Transfer -->
+        <section id="transfer" class="p-6 mt-3">
+          <h2 class="text-lg font-bold">Transfer Money</h2>
+          <div class="bg-white rounded-3xl mt-3">
+            <div class="">
+              <div class="card-body">
+                <fieldset class="fieldset">
+                  <label class="fieldset-label font-medium ml-1 mt-2"
+                    >User Account Number</label
+                  >
+                  <input
+                    value="01666666666"
+                    id="transfer-number"
+                    type="number"
+                    class="input pl-5 rounded-full bg-[#F4F5F7] border-none w-full"
+                    placeholder="Enter 11 digit number"
+                    required
+                  />
+                  <label class="fieldset-label font-medium ml-1 mt-2"
+                    >Amount</label
+                  >
+                  <input
+                    id="transfer-amount"
+                    type="number"
+                    class="input pl-5 rounded-full bg-[#F4F5F7] border-none w-full"
+                    placeholder="Enter amount to transfer"
+                    required
+                  />
+                  <label class="fieldset-label font-medium ml-1 mt-2"
+                    >Pin Number</label
+                  >
+                  <input
+                    value="1234"
+                    id="transfer-pin"
+                    type="text"
+                    class="input pl-5 rounded-full bg-[#F4F5F7] border-none w-full"
+                    placeholder="Enter 4 Digit Pin"
+                    required
+                  />
+                  <button
+                    id="transfer-btn"
+                    class="btn btn-neutral bg-blue-700 mt-5 rounded-full border-none"
+                  >
+                    Send Now
+                  </button>
+                </fieldset>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
     </section>
-    <script src="script/addMoney.js"></script>
     <script src="script/toggle.js"></script>
+    <script src="script/addMoney.js"></script>
     <script src="script/cashout.js"></script>
+    <script src="script/transfer.js"></script>
     <script src="script/transection.js"></script>
   </body>
 </html>

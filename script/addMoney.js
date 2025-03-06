@@ -20,12 +20,15 @@ document
 
       const pin = document.getElementById("pin").value;
       if (pin === "1234") {
-        // console.log('addd');
+        if (selectedBnak === "") {
+          alert("Select a Bank!!!");
+          return;
+        }
         const sum = mainBalance + amount;
         document.getElementById("main-balance").innerText = sum;
 
         // transection history
-        const container = document.getElementById("transection-container");
+        // const container = document.getElementById("transection-container");
         // const p = document.createElement('p');
         // p.innerText = `
         //   added ${amount} from ${accNumber} account
@@ -33,14 +36,13 @@ document
         // console.log(p);
         // container.appendChild(p);
         const div = document.createElement("div");
-        div.classList.add("bg-blue-200","p-4","border");
+        div.classList.add("bg-blue-200", "p-4", "border");
         div.innerHTML = `
         <h1 class="text-yellow-700">Added Money from ${selectedBnak}</h1>
         <h3>${amount}</h3>
         <p>account no: ${accNumber}</p>
-        `
-        container.appendChild(div);
-
+        `;
+        // container.appendChild(div);
       } else {
         alert("Wrong pin");
       }
@@ -52,7 +54,6 @@ document
 document.getElementById("logout-btn").addEventListener("click", function () {
   window.location.href = "index.html";
 });
-
 
 // document.getElementById("").addEventListener("submit", function(event) {
 //     let bankSelect = document.getElementById("all-bank");
